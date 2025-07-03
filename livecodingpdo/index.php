@@ -8,7 +8,7 @@ $query = "SELECT * FROM person WHERE firstname LIKE '%A%'";
 // J'execute ma requete
 $statement = $pdo->query($query);
 // Je recup tt mes résultats en tableau associatif
-$students = $statement->fetchAll();
+$students = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -28,6 +28,9 @@ $students = $statement->fetchAll();
         <div><?= $student['firstname'] ?></div>
     <?php endforeach; ?>
 
+    <pre>
+        <?php print_r($students); ?>
+    </pre>
 
 </body>
 
