@@ -28,7 +28,7 @@ $stories = $statement->fetchAll(PDO::FETCH_OBJ);
         <?php
         foreach ($stories as $story): ?>
             <article class="card m-1">
-                <h2><?= $story->title ?></h2>
+                <h2><?= htmlspecialchars($story->title) ?></h2>
                 <p><?= nl2br($story->content) ?></p>
                 <em><?= $story->author ?></em>
             </article>
