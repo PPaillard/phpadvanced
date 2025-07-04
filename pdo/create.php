@@ -22,6 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 
     if (empty($errors)) {
+        // TODO : Securiser les données
+        // TODO : Gestion des erreurs de connexion à la BDD
+
         // Inserer les données
         // On appelle la config
         require "config.php";
@@ -32,7 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         // On execute la requête
         $rowCount = $pdo->exec($query);
 
-        // je redirige
+        // je redirige vers la liste des histoires
+        header("Location: index.php");
+        exit();
     }
 }
 ?>
@@ -51,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <h1>Ajouter une histoire</h1>
 
     <?php
+    /* Affichage des erreurs */
     if (!empty($errors)):
         foreach ($errors as $error): ?>
             <div class="alert alert-danger"><?= $error ?></div>
@@ -59,13 +65,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     endif; ?>
     <form action="create.php" method="post">
         <label for="title">Titre</label>
-        <input type="text" name="title" id="title" required>
+        <?php /* TODO : s'il y avait une erreur, on prérempli le champs titre avec l'ancien titre */ ?>
+        <input type="text" name="title" id="title" required maxlength="255">
         <br><br>
         <label for="content">Contenu</label>
         <textarea name="content" id="content" required></textarea>
         <br><br>
         <label for="author">Auteur</label>
-        <input type="text" name="author" id="author" required>
+        <input type="text" name="author" id="author" required maxlength="100">
         <br><br>
         <input type="submit" value="Ajouter">
     </form>
