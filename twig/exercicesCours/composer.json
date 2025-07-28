@@ -1,0 +1,12 @@
+{
+    "name": "pierre/exercices-cours",
+    "description": "Projet des exercices du cours sur Twig",
+    "require": {
+        "twig/twig": "^3.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pierre\\ExercicesCours\\": "src/"
+        }
+    }
+}
