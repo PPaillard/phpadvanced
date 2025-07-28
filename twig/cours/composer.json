@@ -1,0 +1,19 @@
+{
+    "name": "pierre/cours",
+    "description": "Cours sur twig",
+    "type": "project",
+    "require": {
+        "twig/twig": "^3.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pierre\\Cours\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PierreP",
+            "email": "paillard.pierre@gmail.com"
+        }
+    ]
+}
