@@ -6,9 +6,7 @@ use Twig\Environment;
 
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader, [
-    'cache' => __DIR__ . '/cache',
-    'auto_reload' => true,
-    'debug' => true
+    'cache' => false
 ]);
 
 echo $twig->render(
