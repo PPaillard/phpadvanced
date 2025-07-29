@@ -24,7 +24,7 @@ $temperature = 23;
 echo $twig->render("readingPlace.html.twig", [
     "temperature" => $temperature
 ]);*/
-
+/* Exercice 3
 $books = [
     ['title' => '1984', 'author' => 'George Orwell'],
     ['title' => 'Le Meilleur des mondes', 'author' => 'Aldous Huxley'],
@@ -34,3 +34,11 @@ $books = [
 echo $twig->render("bookList.html.twig", [
     "books" => $books
 ]);
+*/
+/* Crée une structure de page en trois parties :
+Un en-tête (header.twig)
+Un pied de page (footer.twig)
+Un corps principal (accueil.twig) qui inclut les deux autres! 
+ */
+
+echo $twig->render("home.html.twig");
