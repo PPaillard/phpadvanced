@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Lieu de lecture</title>
+	</head>
+	<body>
+        {% if temperature >= 25 %}
+            <p>Lecture au parc</p>
+        {% elseif temperature >= 15 %}
+            <p>Lecture à la terrasse</p>
+        {% else %}
+            <p>Lecture en salle</p>
+        {% endif %}
+	</body>
+</html>

@@ -9,7 +9,7 @@ $loader = new FilesystemLoader("./templates");
 $twig = new Environment($loader, [
     "cache" => false
 ]);
-
+/* Exercice 1
 $member = new stdClass();
 $member->firstname = "Toto";
 $member->membership = 2024;
@@ -17,4 +17,10 @@ $member->active = false;
 
 echo $twig->render("showMember.html.twig", [
     "member" => $member
+]);*/
+
+$temperature = 23;
+
+echo $twig->render("readingPlace.html.twig", [
+    "temperature" => $temperature
 ]);
