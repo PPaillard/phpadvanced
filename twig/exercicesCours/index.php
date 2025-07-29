@@ -18,9 +18,19 @@ $member->active = false;
 echo $twig->render("showMember.html.twig", [
     "member" => $member
 ]);*/
-
+/* Exercice 2
 $temperature = 23;
 
 echo $twig->render("readingPlace.html.twig", [
     "temperature" => $temperature
+]);*/
+
+$books = [
+    ['title' => '1984', 'author' => 'George Orwell'],
+    ['title' => 'Le Meilleur des mondes', 'author' => 'Aldous Huxley'],
+    ['title' => 'Fahrenheit 451', 'author' => 'Ray Bradbury']
+];
+
+echo $twig->render("bookList.html.twig", [
+    "books" => $books
 ]);
